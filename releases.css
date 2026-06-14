@@ -1,5 +1,3 @@
-/* ── Releases Page ── */
-
 .releases-header {
   min-height: 40vh;
   display: flex;
@@ -8,7 +6,7 @@
   justify-content: center;
   text-align: center;
   padding: 8rem 2rem 4rem;
-  background: var(--bg);
+  background: #45070a;
 }
 
 .releases-header h1 {
@@ -20,7 +18,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* ── Release Sections ── */
+
 .release-section {
   padding: 6rem 0;
   background: var(--bg);
@@ -71,7 +69,6 @@
   gap: 0.6rem;
 }
 
-/* ── Slideshow ── */
 .slideshow {
   position: relative;
   border-radius: var(--radius);
@@ -120,7 +117,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.55);
+  background: #45070a;
   border: 1px solid rgba(255,255,255,0.1);
   color: var(--text);
   font-size: 1.1rem;
@@ -152,16 +149,14 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.3);
+  background: #45070a;
   cursor: pointer;
   transition: background 0.2s;
 }
 .dot.active { background: var(--accent); }
 
-/* ── Nav active state ── */
 .nav-active { color: var(--accent) !important; }
 
-/* ── Mobile ── */
 @media (max-width: 768px) {
   .release-grid,
   .release-grid.reverse {

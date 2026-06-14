@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Fahriye</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">FAHRIYE</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="releases.html">Releases</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">talk to me, i don't bite</h2>
+      <p class="section-sub">(inquiries and collaborations)</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon"></span>
+            <div>
+              <strong>talk to me here</strong>
+              <p><a href="mailto:inquiries@fahriyemusic.com">inquiries@fahriyemusic.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon"></span>
+            <div>
+              <strong>follow me here</strong>
+              <p>
+                <a href="https://www.instagram.com/withlovefahriye/" target="_blank">Instagram</a> ·
+                <a href="https://www.tiktok.com/@withlovefahriye" target="_blank">TikTok</a> ·
+                <a href="https://www.youtube.com/@withlovefahriye" target="_blank">YouTube</a> ·
+                <a href="https://x.com/withlovefahriye" target="_blank">Twitter (X)</a>
+              </p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon"></span>
+            <div>
+              <strong>hear me live here</strong>
+              <p>you can also use the form to email me directly!</p>
+            </div>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xojzyayj" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="booking">Inquiry</option>
+              <option value="collab">Collaboration</option>
+              <option value="press">Press / Media</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me more..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          <p id="form-status" class="form-status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2026 Fahriye. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/withlovefahriye/" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@withlovefahriye" target="_blank">TikTok</a>
+        <a href="https://www.youtube.com/@withlovefahriye" target="_blank">YouTube</a>
+        <a href="https://open.spotify.com/artist/7KWCDlzcTeZ2Z0BFqYNhMF?si=_0SzZjW6Rpmb2HBz6mKb4Q" target="_blank">Spotify</a>
+        <a href="https://music.apple.com/us/artist/fahriye/1817758678" target="_blank">Apple Music</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
