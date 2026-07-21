@@ -286,6 +286,19 @@ section:nth-child(even) { background: var(--bg2); }
 .form-status.success { color: #6fcf97; }
 .form-status.error { color: #eb5757; }
 
+.notice-banner {
+  background: #3a0a0d;
+  border: 1px solid #7a1a20;
+  border-radius: var(--radius);
+  padding: 1rem 1.4rem;
+  margin-bottom: 2.5rem;
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.notice-banner a { color: #e8a0a5; text-decoration: underline; }
+.notice-banner a:hover { color: var(--text); }
+
 footer {
   background: #0a0a0a;
   border-top: 1px solid var(--border);
