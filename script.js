@@ -22,7 +22,8 @@ navOverlay.querySelectorAll('a').forEach(a =>
 );
 
 // Contact form
-document.getElementById('contact-form').addEventListener('submit', async function (e) {
+const contactForm = document.getElementById('contact-form');
+if (contactForm) contactForm.addEventListener('submit', async function (e) {
   e.preventDefault();
   const status = document.getElementById('form-status');
   const btn = this.querySelector('button[type="submit"]');
