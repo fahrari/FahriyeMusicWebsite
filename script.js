@@ -1,15 +1,24 @@
+// Popup
+const popup = document.getElementById('popup-overlay');
+if (popup) {
+  document.getElementById('popup-close').addEventListener('click', () => popup.classList.add('hidden'));
+  popup.addEventListener('click', e => { if (e.target === popup) popup.classList.add('hidden'); });
+}
+
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// Mobile nav toggle
+// Nav overlay
 const toggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a =>
-  a.addEventListener('click', () => navLinks.classList.remove('open'))
+const navOverlay = document.getElementById('nav-overlay');
+const navClose = document.getElementById('nav-close');
+toggle.addEventListener('click', () => navOverlay.classList.add('open'));
+navClose.addEventListener('click', () => navOverlay.classList.remove('open'));
+navOverlay.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => navOverlay.classList.remove('open'))
 );
 
 // Contact form
