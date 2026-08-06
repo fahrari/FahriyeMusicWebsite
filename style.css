@@ -489,9 +489,51 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
 
   .release-grid,
   .release-grid.reverse {
-    grid-template-columns: 1fr;
-    direction: ltr;
-    gap: 2.5rem;
+    grid-template-columns: 1fr !important;
+    direction: ltr !important;
+    gap: 1.5rem;
+  }
+
+  .release-grid > *,
+  .release-grid.reverse > * {
+    order: unset !important;
+  }
+
+  .release-section {
+    padding: 3rem 0;
+  }
+
+  .release-info {
+    padding: 1.2rem;
+  }
+
+  .release-info h2 {
+    font-size: 2rem;
+  }
+
+  .release-blurb {
+    font-size: 0.95rem;
+  }
+
+  .slideshow {
+    max-width: 100%;
+  }
+
+  .project-header {
+    padding: 1.5rem 0;
+  }
+
+  .project-title {
+    font-size: 1.6rem;
+  }
+
+  .press-image-wrap {
+    max-width: 100%;
+    aspect-ratio: 4/3;
+  }
+
+  .press-title {
+    font-size: 1.3rem !important;
   }
 }
 
