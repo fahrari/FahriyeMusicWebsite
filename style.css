@@ -15,7 +15,7 @@
   --accent: ;
   --accent-dim: #000000;
   --text: #e8e2d9;
-  --text-muted: #888;
+  --text-muted: #fff;
   --border: #2a2a2a;
   --radius: 8px;
   --font: 'CormorantGaramond', serif;
@@ -25,7 +25,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: #45070a;
+  background: url('wowie.png') center/cover fixed;
   color: var(--text);
   font-family: var(--font-CormorantGaramond);
   font-size: 16px;
@@ -33,6 +33,8 @@ body {
 }
 
 a { color: var(--accent); text-decoration: none; }
+
+* { text-shadow: 0 1px 4px rgba(0,0,0,0.5); }
 a:hover { color: var(--text); }
 
 img { max-width: 100%; display: block; }
@@ -219,7 +221,7 @@ img { max-width: 100%; display: block; }
 }
 
 section:not(#hero) { padding: 6rem 0; }
-section:nth-child(even) { background: var(--bg2); }
+section:nth-child(even) { background: transparent; }
 
 .section-title {
   font-family: var(--font);
@@ -231,6 +233,7 @@ section:nth-child(even) { background: var(--bg2); }
 .section-sub {
   color: var(--text-muted);
   margin-bottom: 3rem;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }
 
 .about-grid {
@@ -259,6 +262,9 @@ section:nth-child(even) { background: var(--bg2); }
 }
 .about-text p { color: var(--text-muted); margin-bottom: 1rem; }
 .about-cta { color: var(--accent) !important; font-style: italic; }
+
+#music { background: #E5B374; }
+#contact { background: #E5B374; }
 
 .music-grid {
   display: grid;
@@ -438,12 +444,23 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
   to { opacity: 1; }
 }
 
+.section-divider {
+  text-align: center;
+  padding: 1rem 0;
+  background: #16110C;
+}
+.section-divider img {
+  width: 120px;
+  display: inline-block;
+}
+
 .project-group {
   border-top: 1px solid var(--border);
 }
 .project-header {
-  padding: 3rem 0 0;
+  padding: 3rem 0;
   text-align: center;
+  background: transparent;
 }
 .project-title {
   font-family: var(--font);
@@ -479,14 +496,14 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
 }
 
 .releases-header {
-  min-height: 40vh;
+  min-height: 48vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 8rem 2rem 4rem;
-  background: #45070a;
+  background: #E5B374;
 }
 
 .releases-header h1 {
@@ -500,10 +517,10 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
 
 .release-section {
   padding: 6rem 0;
-  background: var(--bg);
+  background: transparent;
 }
 .release-section.alt {
-  background: var(--bg2);
+  background: transparent;
 }
 
 .release-grid {
@@ -523,8 +540,14 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: #fff;
   margin-bottom: 0.5rem;
+}
+
+.release-info {
+  background: rgba(0,0,0,0.55);
+  border-radius: 16px;
+  padding: 2rem;
 }
 
 .release-info h2 {
@@ -536,7 +559,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
 }
 
 .release-blurb {
-  color: var(--text-muted);
+  color: #fff;
   font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 1.8rem;
@@ -596,7 +619,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #45070a;
+  background: rgba(0,0,0,0.5);
   border: 1px solid rgba(255,255,255,0.1);
   color: var(--text);
   font-size: 1.1rem;
@@ -628,7 +651,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #45070a;
+  background: rgba(255,255,255,0.4);
   cursor: pointer;
   transition: background 0.2s;
 }
