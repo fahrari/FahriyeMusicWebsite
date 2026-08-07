@@ -455,7 +455,6 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
 }
 
 .project-group {
-  border-top: 1px solid var(--border);
 }
 .project-header {
   padding: 3rem 0;
