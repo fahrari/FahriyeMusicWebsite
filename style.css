@@ -264,7 +264,18 @@ section:nth-child(even) { background: transparent; }
 .about-cta { color: var(--accent) !important; font-style: italic; }
 
 #music { background: #E5B374; }
+#music .section-title { color: #1a1008; }
 #contact { background: #E5B374; }
+
+#contact .section-title,
+#contact .section-sub,
+#contact .contact-item strong,
+#contact .contact-item p,
+#contact .contact-item a,
+#contact .form-group label,
+#contact .btn-full {
+  color: #1a1008;
+}
 
 .music-grid {
   display: grid;
@@ -545,6 +556,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
   text-align: center;
   padding: 8rem 2rem 4rem;
   background: #E5B374;
+  color: #1a1008;
 }
 
 .releases-header h1 {
@@ -552,8 +564,18 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
   font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 400;
   letter-spacing: 0.08em;
-  color: var(--text);
+  color: #1a1008;
   margin-bottom: 0.5rem;
+}
+
+.releases-header .hero-tag,
+.releases-header .hero-sub {
+  color: #1a1008;
+}
+
+#navbar.nav-dark .nav-logo,
+#navbar.nav-dark .nav-toggle {
+  color: #1a1008;
 }
 
 .release-section {
