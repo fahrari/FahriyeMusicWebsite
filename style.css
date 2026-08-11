@@ -107,8 +107,14 @@ img { max-width: 100%; display: block; }
   font-size: 1.5rem;
   color: var(--text);
   letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
 }
+.nav-logo img { height: 36px; width: auto; }
 .nav-logo:hover { color: var(--accent); }
+.logo-dark { display: none; }
+#navbar.nav-dark .logo-light { display: none; }
+#navbar.nav-dark .logo-dark { display: block; }
 .nav-toggle {
   background: none;
   border: none;
@@ -191,6 +197,8 @@ img { max-width: 100%; display: block; }
   color: var(--accent);
   margin-bottom: 1rem;
 }
+.hero-logo { height: clamp(80px, 15vw, 180px); width: auto; margin-bottom: 1rem; }
+
 #hero h1 {
   font-family: var(--font);
   font-size: clamp(3.5rem, 10vw, 7rem);
