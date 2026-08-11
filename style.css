@@ -260,12 +260,15 @@ section:nth-child(even) { background: transparent; }
   font-weight: 400;
   margin-bottom: 1.2rem;
 }
+.about-image img { border-radius: 20px; box-shadow: 0 12px 40px rgba(0,0,0,0.5); }
 .about-text p { color: var(--text-muted); margin-bottom: 1rem; }
 .about-cta { color: var(--accent) !important; font-style: italic; }
 
 #music { background: #E5B374; }
 #music .section-title { color: #1a1008; }
 #contact { background: #E5B374; }
+
+#contact .contact-item a:hover { text-decoration: underline; }
 
 #contact .section-title,
 #contact .section-sub,
