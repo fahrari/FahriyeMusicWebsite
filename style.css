@@ -110,7 +110,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
 }
-.nav-logo img { height: 36px; width: auto; }
+.nav-logo img { height: 28px; width: auto; }
 .nav-logo:hover { color: var(--accent); }
 .logo-dark { display: none; }
 #navbar.nav-dark .logo-light { display: none; }
