@@ -23,8 +23,8 @@
 }
 
 html { scroll-behavior: smooth; }
-* { cursor: url('sillybilly-cursor.png'), auto; }
-a, button, [role="button"], input[type="submit"] { cursor: url('sillybilly-cursor.png'), pointer; }
+* { cursor: url('cursor-small.png'), auto; }
+a, button, [role="button"], input[type="submit"] { cursor: url('cursor-small.png'), pointer; }
 
 body {
   background: url('wowie.png') center/cover fixed;
