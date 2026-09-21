@@ -9,7 +9,7 @@ Hi! This is website will be used so people can stream.buy my music, connect with
 
 *Author Contact Information*
 
-fahriyedahlia@gmail.com
+temporaryfahriyeinquiries@gmail.com
 
 *Known Issues*
 
