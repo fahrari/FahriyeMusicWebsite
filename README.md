@@ -9,11 +9,8 @@ Hi! This is website will be used so people can stream.buy my music, connect with
 
 *Author Contact Information*
 
-@withlovefahriye on Instagram
-
-inquiries@fahriyemusic.com
+temporaryfahriyeinquiries@gmail.com
 
 *Known Issues*
 
-None at the moment (June 14, 2026), however feel free to contact me if any bugs have been noticed.
-
+Original inquiries E-Mail isn't working, use E-Mail above to contact directly.
