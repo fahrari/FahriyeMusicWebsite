@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <nav id="navbar" class="nav-dark">
+  <nav id="navbar">
     <div class="nav-inner">
       <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
       <a class="nav-logo" href="/"><img src="FahriyeLogo-trimmed.png" class="logo-light" alt="FAHRIYE" /><img src="FahriyeLogoBlack-trimmed.png" class="logo-dark" alt="FAHRIYE" /></a>
@@ -28,9 +28,27 @@
   </div>
 
   <section id="music">
+    <div class="music-video-bg">
+      <iframe src="https://www.youtube.com/embed/DSqxxzTiKCE?autoplay=1&mute=1&loop=1&playlist=DSqxxzTiKCE&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="music-video-overlay"></div>
+    </div>
     <div class="container">
-      <h2 class="section-title">but where can i listen to you?</h2>
+      <h2 class="section-title">what's new?</h2>
       <div class="music-grid">
+
+        <div class="music-card">
+          <div class="album-art placeholder-art">
+            <img src="resist cover (2).jpg" alt="Resist" />
+          </div>
+          <div class="music-info">
+            <h3>Pre-Save Resist</h3>
+            <p class="music-meta">Single · Coming Soon</p>
+            <p>My upcoming single "RESIST" — pre-save it now!</p>
+            <div class="music-links">
+              <a href="https://ffm.to/psresist" target="_blank" class="btn btn-small btn-outline">Pre-Save</a>
+            </div>
+          </div>
+        </div>
 
         <div class="music-card">
           <div class="album-art placeholder-art">
@@ -67,25 +85,130 @@
           </div>
         </div>
 
-        <div class="music-card">
-          <img src="genesisepmore.png" alt="Genesis" />
-          <div class="music-info">
-            <h3>More</h3>
-            <p class="music-meta"> FFM Bio </p>
-            <p>click the button down below for more fun stuff! </p>
-            <div class="music-links">
-              <a href="https://ffm.bio/fahriye" target="_blank" class="btn btn-primary btn-small">More</a>
-            </div>
-          </div>
-        </div>
 
       </div>
+      <div class="covers-dropdown">
+        <button class="covers-toggle" aria-expanded="false">covers <span class="covers-arrow">↓</span></button>
+        <div class="covers-body">
+        <div class="covers-row">
+
+      <div class="covers-block">
+        <h2 class="section-title covers-title">dance covers</h2>
+        <div class="slideshow" id="dance-slideshow">
+          <button class="slide-arrow slide-prev" aria-label="Previous">&#8592;</button>
+          <div class="slide-main">
+            <div class="slide-track">
+              <div class="slide active">
+                <video src="britneydance.mp4" controls playsinline></video>
+                <p class="slide-label">Britney</p>
+              </div>
+              <div class="slide">
+                <video src="mobdance.mp4" controls playsinline></video>
+                <p class="slide-label">Make or Break</p>
+              </div>
+              <div class="slide">
+                <video src="711dance.mp4" controls playsinline></video>
+                <p class="slide-label">711 — Beyoncé</p>
+              </div>
+              <div class="slide">
+                <video src="babyboydance.mp4" controls playsinline></video>
+                <p class="slide-label">Baby Boy — Beyoncé</p>
+              </div>
+              <div class="slide">
+                <video src="sportscardance.mp4" controls playsinline></video>
+                <p class="slide-label">Sportscar</p>
+              </div>
+            </div>
+            <div class="slide-dots" id="dance-dots"></div>
+          </div>
+          <button class="slide-arrow slide-next" aria-label="Next">&#8594;</button>
+        </div>
+      </div>
+
+      <div class="covers-block">
+        <h2 class="section-title covers-title">vocal covers</h2>
+        <div class="slideshow" id="vocal-slideshow">
+          <button class="slide-arrow slide-prev" aria-label="Previous">&#8592;</button>
+          <div class="slide-main">
+            <div class="slide-track">
+              <div class="slide active">
+                <video src="texasholdemcover.mp4" controls playsinline></video>
+                <p class="slide-label">Texas Hold 'Em — Beyoncé</p>
+              </div>
+              <div class="slide">
+                <video src="buttonscover.mp4" controls playsinline></video>
+                <p class="slide-label">Buttons — Pussycat Dolls</p>
+              </div>
+              <div class="slide">
+                <video src="countdowncover.mp4" controls playsinline></video>
+                <p class="slide-label">Countdown — Beyoncé</p>
+              </div>
+              <div class="slide">
+                <video src="dangerouslycover.mp4" controls playsinline></video>
+                <p class="slide-label">Dangerously — Charlie Puth</p>
+              </div>
+              <div class="slide">
+                <video src="faouziacover.mp4" controls playsinline></video>
+                <p class="slide-label">Faouzia</p>
+              </div>
+            </div>
+            <div class="slide-dots" id="vocal-dots"></div>
+          </div>
+          <button class="slide-arrow slide-next" aria-label="Next">&#8594;</button>
+        </div>
+      </div>
+
+      </div><!-- end covers-row -->
+        </div><!-- end covers-body -->
+      </div><!-- end covers-dropdown -->
     </div>
-  </section>
+  </section><!-- end #music -->
+
+  <script>
+    const coversToggle = document.querySelector('.covers-toggle');
+    const coversBody = document.querySelector('.covers-body');
+    coversToggle.addEventListener('click', function() {
+      const expanded = coversToggle.getAttribute('aria-expanded') === 'true';
+      coversToggle.setAttribute('aria-expanded', !expanded);
+      coversBody.classList.toggle('open', !expanded);
+      coversToggle.querySelector('.covers-arrow').textContent = !expanded ? '↑' : '↓';
+    });
+
+    document.querySelectorAll('.slideshow').forEach(function(ss) {
+      const slides = ss.querySelectorAll('.slide');
+      const dotsContainer = ss.parentElement.querySelector('.slide-dots');
+      let current = 0;
+
+      slides.forEach(function(_, i) {
+        const d = document.createElement('button');
+        d.className = 'slide-dot' + (i === 0 ? ' active' : '');
+        d.addEventListener('click', function() { goTo(i); });
+        dotsContainer.appendChild(d);
+      });
+
+      function goTo(n) {
+        slides[current].classList.remove('active');
+        dotsContainer.querySelectorAll('.slide-dot')[current].classList.remove('active');
+        // pause any playing video
+        const vid = slides[current].querySelector('video');
+        if (vid) vid.pause();
+        current = (n + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dotsContainer.querySelectorAll('.slide-dot')[current].classList.add('active');
+      }
+
+      ss.querySelector('.slide-prev').addEventListener('click', function() { goTo(current - 1); });
+      ss.querySelector('.slide-next').addEventListener('click', function() { goTo(current + 1); });
+    });
+  </script>
 
   <footer>
     <div class="container footer-inner">
       <p>© 2026 Fahriye. All rights reserved.</p>
+      <form class="footer-signup" action="https://formspree.io/f/maeqblwq" method="POST">
+        <input type="email" name="email" placeholder="stay in the loop · your@email.com" required />
+        <button type="submit">→</button>
+      </form>
       <div class="footer-links">
         <a href="https://www.instagram.com/withlovefahriye/" target="_blank">Instagram</a>
         <a href="https://www.tiktok.com/@withlovefahriye" target="_blank">TikTok</a>

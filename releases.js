@@ -1,3 +1,12 @@
+document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const expanded = trigger.getAttribute('aria-expanded') === 'true';
+    trigger.setAttribute('aria-expanded', !expanded);
+    const body = trigger.nextElementSibling;
+    body.classList.toggle('open', !expanded);
+  });
+});
+
 document.querySelectorAll('.slideshow').forEach(slideshow => {
   const slides = slideshow.querySelectorAll('.slide');
   const dotsContainer = slideshow.querySelector('.slide-dots');

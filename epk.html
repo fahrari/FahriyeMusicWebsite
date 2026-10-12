@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Press Kit — Fahriye</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="cursor.png" />
+  <style>
+    .epk-header {
+      padding: 6rem 0 3rem;
+      text-align: center;
+    }
+    .epk-header h1 {
+      font-family: var(--font);
+      font-size: clamp(3rem, 10vw, 6rem);
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      margin: 0.5rem 0;
+    }
+    .epk-header p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+    }
+    .epk-header .hero-actions {
+      margin-top: 2rem;
+    }
+
+    .epk-section {
+      padding: 4rem 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .epk-section .section-title {
+      margin-bottom: 2rem;
+    }
+
+    /* Fact sheet */
+    .fact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .fact-item {
+      background: rgba(255,255,255,0.03);
+      padding: 1.4rem 1.6rem;
+      text-align: center;
+    }
+    .fact-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 0 0 6px;
+      opacity: 0.6;
+    }
+    .fact-value {
+      font-family: var(--font);
+      font-size: 1.1rem;
+      color: var(--text);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Bio */
+    .bio-text {
+      max-width: 100%;
+    }
+    .bio-text p {
+      color: var(--text-muted);
+      margin-bottom: 2.4em;
+      font-size: 1rem;
+      line-height: 2.2;
+      max-width: 100%;
+    }
+    .bio-text p:last-child { margin: 0; }
+
+    /* Releases */
+    .epk-releases {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .epk-release-row {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.2rem 1.6rem;
+      background: rgba(255,255,255,0.02);
+      flex-wrap: wrap;
+    }
+    .epk-release-row:hover { background: rgba(255,255,255,0.05); }
+    .epk-release-info { flex: 1; min-width: 0; }
+    .epk-release-info h3 {
+      font-family: var(--font);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--text);
+      margin: 0 0 3px;
+    }
+    .epk-release-info p {
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      opacity: 0.6;
+      margin: 0;
+    }
+    .epk-release-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--text-muted);
+      padding: 3px 10px;
+      border-radius: 99px;
+    }
+    .epk-release-tag.upcoming {
+      border-color: #E5B374;
+      color: #E5B374;
+    }
+    .epk-release-link {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #E5B374;
+      text-decoration: none;
+    }
+    .epk-release-link:hover { text-decoration: underline; }
+
+    /* Press */
+    .epk-press-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .epk-press-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius);
+      padding: 1.6rem 1.8rem;
+    }
+    .epk-press-pub {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E5B374;
+      margin: 0 0 8px;
+    }
+    .epk-press-headline {
+      font-family: var(--font);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--text);
+      margin: 0 0 10px;
+    }
+    .epk-press-blurb {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      opacity: 0.75;
+      margin: 0 0 14px;
+      line-height: 1.7;
+    }
+    .epk-press-read {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #E5B374;
+      text-decoration: none;
+    }
+    .epk-press-read:hover { text-decoration: underline; }
+
+    /* Video */
+    .epk-video-card {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius);
+      padding: 1.6rem 1.8rem;
+      text-decoration: none;
+      flex-wrap: wrap;
+      transition: background 0.2s;
+    }
+    .epk-video-card:hover { background: rgba(255,255,255,0.06); }
+    .epk-play {
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--text);
+      font-size: 1rem;
+    }
+    .epk-video-info h3 {
+      font-family: var(--font);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--text);
+      margin: 0 0 4px;
+    }
+    .epk-video-info p {
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      opacity: 0.6;
+      margin: 0 0 8px;
+    }
+    .epk-video-cta {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #E5B374;
+    }
+
+    /* Socials */
+    .epk-socials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+    .epk-social {
+      display: block;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.4rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .epk-social:hover { background: rgba(255,255,255,0.06); }
+    .epk-social-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      opacity: 0.5;
+      margin: 0 0 4px;
+    }
+    .epk-social-handle {
+      font-family: var(--font);
+      font-size: 1rem;
+      color: var(--text);
+      margin: 0;
+    }
+
+    /* Contact */
+    .epk-contact-block {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius);
+      padding: 2rem 2.2rem;
+    }
+    .epk-contact-block p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin: 0 0 6px;
+      opacity: 0.7;
+    }
+    .epk-contact-email {
+      font-family: var(--font);
+      font-size: 1.4rem !important;
+      color: var(--text) !important;
+      opacity: 1 !important;
+    }
+
+    .epk-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .epk-photo-grid a {
+      display: block;
+      aspect-ratio: 1;
+      overflow: hidden;
+      border-radius: var(--radius);
+    }
+    .epk-photo-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .epk-photo-grid a:hover img {
+      transform: scale(1.04);
+    }
+
+    @media (max-width: 600px) {
+      .epk-release-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <a class="nav-logo" href="/"><img src="FahriyeLogo-trimmed.png" class="logo-light" alt="FAHRIYE" /><img src="FahriyeLogoBlack-trimmed.png" class="logo-dark" alt="FAHRIYE" /></a>
+    </div>
+  </nav>
+
+  <div id="nav-overlay">
+    <button id="nav-close">&times;</button>
+    <ul id="nav-menu">
+      <li><a href="about.html">About</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="releases.html">Releases</a></li>
+      <li><a href="press.html">Press</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="epk-header">
+    <div class="container">
+      <p class="hero-tag">Electronic Press Kit · 2026</p>
+      <h1><img src="FahriyeLogo-trimmed.png" alt="FAHRIYE" style="height: clamp(60px, 12vw, 140px); width: auto; display: block; margin: 0 auto;" /></h1>
+      <p>Recording Artist</p>
+      <div class="hero-actions">
+        <a href="mailto:fahriyeinquiries@gmail.com" class="btn btn-primary">Booking &amp; Inquiries</a>
+        <a href="https://ffm.to/genesis-qetb" target="_blank" class="btn btn-outline">Where to listen</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Biography -->
+  <section class="epk-section">
+    <div class="container">
+      <h2 class="section-title">Biography</h2>
+      <div class="bio-text">
+        <p>Fahriye (Fah-ree-yeh) is a recording artist based in Boston, MA. She grew up in San José, Bay Area, CA, between two musical worlds: Turkish songs and western pop under the same roof. Both live in her, and both show up in her music, sometimes on their own, sometimes fused.</p>
+        <p>A multi-threat vocalist, songwriter, producer, performer, and dancer, Fahriye creates pop music whose influences span Beyoncé to Hadise. She has been songwriting consistently since she was 16 years old, debuted with "Move" on her 20th birthday (July 4th, 2025), and is releasing her debut EP, <em>[REDACTED]</em>, in 2026. Her next single "RESIST" is a first foray into love/crush songs, steeped in Turkish musical elements, stacked harmonies, and a dramatic intro, arriving October 23rd, 2026.</p>
+        <p>Her sound is unique, fresh, and fully her own while staying grounded in western pop music, traditional Turkish music, and pop that infuses middle-eastern elements into its sound. She has also been performing and dancing for as long as she can remember, striving to be an artist who constantly raises the bar for herself: never only in one place, appreciating what she's accomplished, but always looking forward to how she can keep getting even better. There is nothing she loves more than being a vocalist, songwriter, producer, performer, dancer, and overall someone with a powerful creative vision.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fact Sheet -->
+  <section class="epk-section">
+    <div class="container">
+      <h2 class="section-title">At a Glance</h2>
+      <div class="fact-grid">
+        <div class="fact-item">
+          <p class="fact-label">Name</p>
+          <p class="fact-value">Fahriye<br><span style="font-size:0.85rem;opacity:0.6;">Fah-ree-yeh</span></p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Born</p>
+          <p class="fact-value" style="text-align:center;">July 4, 2005<br><span style="font-size:0.85rem;opacity:0.6;">In Palo Alto, CA, raised in San Jose, CA</span></p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Based</p>
+          <p class="fact-value">Boston, MA</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Roots</p>
+          <p class="fact-value">Turkish + German</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Genre</p>
+          <p class="fact-value">Pop · Dance-pop<br>R&amp;B · Electronic</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Influences</p>
+          <p class="fact-value">Beyoncé, Ariana Grande, Shakira, Hadise</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Debut</p>
+          <p class="fact-value">Move<br><span style="font-size:0.85rem;opacity:0.6;">July 4th, 2025</span></p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Upcoming</p>
+          <p class="fact-value">RESIST<br><span style="font-size:0.85rem;opacity:0.6;">Oct 23</span></p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Debut EP</p>
+          <p class="fact-value">[REDACTED]<br><span style="font-size:0.85rem;opacity:0.6;">December 2026</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discography -->
+  <section class="epk-section">
+    <div class="container">
+      <h2 class="section-title">Discography</h2>
+      <div class="epk-releases">
+
+        <div class="epk-release-row">
+          <div class="epk-release-info">
+            <h3>RESIST</h3>
+            <p>Single · Oct 23, 2026 · [REDACTED] EP</p>
+          </div>
+          <span class="epk-release-tag upcoming">Upcoming</span>
+          <a href="https://ffm.to/psresist" target="_blank" class="epk-release-link">Pre-Save →</a>
+        </div>
+
+        <div class="epk-release-row">
+          <div class="epk-release-info">
+            <h3>GENESIS</h3>
+            <p>Single · Jun 12, 2026 · [REDACTED] EP</p>
+          </div>
+          <span class="epk-release-tag">Single</span>
+          <a href="https://ffm.to/genesis-qetb" target="_blank" class="epk-release-link">Stream →</a>
+        </div>
+
+        <div class="epk-release-row">
+          <div class="epk-release-info">
+            <h3>Make or Break</h3>
+            <p>Single · Oct 31, 2025</p>
+          </div>
+          <span class="epk-release-tag">Single</span>
+          <a href="https://ffm.to/make-or-break" target="_blank" class="epk-release-link">Stream →</a>
+        </div>
+
+        <div class="epk-release-row">
+          <div class="epk-release-info">
+            <h3>Move</h3>
+            <p>Debut Single · Jul 4, 2025</p>
+          </div>
+          <span class="epk-release-tag">Single</span>
+          <a href="https://ffm.to/move-y32r" target="_blank" class="epk-release-link">Stream →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Press -->
+  <section class="epk-section">
+    <div class="container">
+      <h2 class="section-title">Press Coverage</h2>
+      <div class="epk-press-list">
+
+        <div class="epk-press-card">
+          <p class="epk-press-pub">Hype Index · August 2026</p>
+          <h3 class="epk-press-headline">GENESIS as a Featured Release for Hype Index, August 2026</h3>
+          <p class="epk-press-blurb">GENESIS was selected as one of the featured releases by Hype Index in August 2026.</p>
+          <a href="https://hype-index.com/projects/genesis" target="_blank" class="epk-press-read">Read feature →</a>
+        </div>
+
+        <div class="epk-press-card">
+          <p class="epk-press-pub">Backstage Pass by Emily Stabell · July 21, 2026</p>
+          <h3 class="epk-press-headline">Fahriye, making music that feels "confident, feminine, and powerful"</h3>
+          <p class="epk-press-blurb">Fahriye is a 21-year-old artist originally from the Bay Area with Turkish-German roots currently based in Boston. She's connected with people who share "the same drive, ambition, passion, and love for what we do."</p>
+          <a href="https://emilystabell.substack.com/p/fahriye-making-music-that-feels-confident" target="_blank" class="epk-press-read">Read interview →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Music Video -->
+  <section class="epk-section">
+    <div class="container">
+      <h2 class="section-title">Music Video</h2>
+      <a href="https://www.youtube.com/watch?v=DSqxxzTiKCE" target="_blank" class="epk-video-card">
+        <div class="epk-play">&#9654;</div>
+        <div class="epk-video-info">
+          <h3>Make or Break — Official Music Video</h3>
+          <p>YouTube · 2025</p>
+          <p class="epk-video-cta">Watch on YouTube →</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Photos -->
+  <section class="epk-section">
+    <div class="container">
+      <h2 class="section-title">Photos</h2>
+      <div class="epk-photo-grid">
+        <a href="genesis ep cover.jpeg" target="_blank"><img src="genesis ep cover.jpeg" alt="Genesis EP cover" /></a>
+        <a href="resist cover full.jpeg" target="_blank"><img src="resist cover full.jpeg" alt="Resist cover" /></a>
+        <a href="sad.JPG" target="_blank"><img src="sad.JPG" alt="Fahriye" /></a>
+        <a href="mirror.JPG" target="_blank"><img src="mirror.JPG" alt="Fahriye" /></a>
+        <a href="scorned.JPG" target="_blank"><img src="scorned.JPG" alt="Fahriye" /></a>
+        <a href="genesis2.png" target="_blank"><img src="genesis2.png" alt="Fahriye" /></a>
+        <a href="hair.JPG" target="_blank"><img src="hair.JPG" alt="Fahriye" /></a>
+        <a href="wine.JPG" target="_blank"><img src="wine.JPG" alt="Fahriye" /></a>
+        <a href="wowie.png" target="_blank"><img src="wowie.png" alt="Fahriye" /></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Socials -->
+  <section class="epk-section">
+    <div class="container">
+      <h2 class="section-title">Socials</h2>
+      <div class="epk-socials-grid">
+        <a href="https://www.instagram.com/withlovefahriye/" target="_blank" class="epk-social">
+          <p class="epk-social-label">Instagram</p>
+          <p class="epk-social-handle">@withlovefahriye</p>
+        </a>
+        <a href="https://www.tiktok.com/@withlovefahriye" target="_blank" class="epk-social">
+          <p class="epk-social-label">TikTok</p>
+          <p class="epk-social-handle">@withlovefahriye</p>
+        </a>
+        <a href="https://www.youtube.com/@withlovefahriye" target="_blank" class="epk-social">
+          <p class="epk-social-label">YouTube</p>
+          <p class="epk-social-handle">@withlovefahriye</p>
+        </a>
+        <a href="https://x.com/withlovefahriye" target="_blank" class="epk-social">
+          <p class="epk-social-label">Twitter / X</p>
+          <p class="epk-social-handle">@withlovefahriye</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="epk-section">
+    <div class="container">
+      <h2 class="section-title">Booking &amp; Contact</h2>
+      <div class="epk-contact-block">
+        <p>For bookings, press, and collaboration inquiries:</p>
+        <p class="epk-contact-email">fahriyeinquiries@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2026 Fahriye. All rights reserved.</p>
+      <form class="footer-signup" action="https://formspree.io/f/maeqblwq" method="POST">
+        <input type="email" name="email" placeholder="stay in the loop · your@email.com" required />
+        <button type="submit">→</button>
+      </form>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/withlovefahriye/" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@withlovefahriye" target="_blank">TikTok</a>
+        <a href="https://www.youtube.com/@withlovefahriye" target="_blank">YouTube</a>
+        <a href="https://open.spotify.com/artist/7KWCDlzcTeZ2Z0BFqYNhMF?si=_0SzZjW6Rpmb2HBz6mKb4Q" target="_blank">Spotify</a>
+        <a href="https://music.apple.com/us/artist/fahriye/1817758678" target="_blank">Apple Music</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function() {
+      const correct = '@FairyFahriye44';
+
+      document.body.style.visibility = 'hidden';
+
+      const overlay = document.createElement('div');
+      overlay.style.cssText = `
+        position: fixed; inset: 0; z-index: 9999;
+        background: url('wowie.png') center/cover;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        gap: 1.2rem;
+        visibility: visible;
+      `;
+
+      overlay.innerHTML = `
+        <img src="FahriyeLogo-trimmed.png" alt="FAHRIYE" style="height: 60px; width: auto; margin-bottom: 1rem;" />
+        <p style="font-family:'CormorantGaramond',serif; font-size:1rem; letter-spacing:0.15em; text-transform:uppercase; color:#e8e2d9; margin:0;">Press Access</p>
+        <input id="epk-pw" type="password" placeholder="enter password" style="
+          background: rgba(255,255,255,0.06);
+          border: 1px solid rgba(255,255,255,0.15);
+          border-radius: 4px;
+          color: #e8e2d9;
+          font-family: 'CormorantGaramond', serif;
+          font-size: 1.1rem;
+          letter-spacing: 0.08em;
+          padding: 0.7rem 1.4rem;
+          text-align: center;
+          outline: none;
+          width: 260px;
+        " />
+        <p id="epk-error" style="font-family:'CormorantGaramond',serif; font-size:0.85rem; color:#c47a7a; margin:0; min-height:1.2em;"></p>
+        <button id="epk-submit" style="
+          background: rgba(232,226,217,0.1);
+          border: 1px solid rgba(232,226,217,0.25);
+          border-radius: 4px;
+          color: #e8e2d9;
+          font-family: 'CormorantGaramond', serif;
+          font-size: 0.85rem;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          padding: 0.6rem 2rem;
+          cursor: pointer;
+        ">Enter</button>
+      `;
+
+      const pwStyle = document.createElement('style');
+      pwStyle.textContent = '#epk-pw::placeholder { color: rgba(232,226,217,0.85); }';
+      document.head.appendChild(pwStyle);
+      document.body.appendChild(overlay);
+
+      function attempt() {
+        const val = document.getElementById('epk-pw').value;
+        if (val === correct) {
+          overlay.remove();
+          document.body.style.visibility = '';
+        } else {
+          document.getElementById('epk-error').textContent = 'incorrect password';
+          document.getElementById('epk-pw').value = '';
+        }
+      }
+
+      document.getElementById('epk-submit').addEventListener('click', attempt);
+      document.getElementById('epk-pw').addEventListener('keydown', e => { if (e.key === 'Enter') attempt(); });
+    })();
+  </script>
+</body>
+</html>
