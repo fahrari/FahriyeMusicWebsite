@@ -5,91 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Press — Fahriye</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="cursor.png" />
+  <link rel="icon" type="image/png" href="glowlogo.png" />
+  <link rel="apple-touch-icon" href="genesis ep cover.jpeg" />
 </head>
-<body>
+<body class="press-page">
 
-  <nav id="navbar" class="nav-dark">
-    <div class="nav-inner">
-      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
-      <a class="nav-logo" href="/"><img src="FahriyeLogo-trimmed.png" class="logo-light" alt="FAHRIYE" /><img src="FahriyeLogoBlack-trimmed.png" class="logo-dark" alt="FAHRIYE" /></a>
-    </div>
+  <nav class="text-nav text-nav-light press-nav">
+    <a href="/" class="text-nav-home"><img src="fahriyelogoblacknew.png" alt="Fahriye" class="text-nav-logo" /></a>
+    <a href="about.html">About</a>
+    <a href="music.html">Music</a>
+    <a href="releases.html">Releases</a>
+    <a href="press.html">Press</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <div id="nav-overlay">
-    <button id="nav-close">&times;</button>
-    <ul id="nav-menu">
-      <li><a href="about.html">About</a></li>
-      <li><a href="music.html">Music</a></li>
-      <li><a href="releases.html">Releases</a></li>
-      <li><a href="press.html">Press</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <!-- Sticky background that swaps as you scroll -->
+  <div id="press-bg"></div>
+
+  <div id="press-scroll">
+
+    <section class="press-panel" data-bg="resist cover (2).jpg" style="animation: bounceIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.1s both;">
+      <div class="press-panel-inner press-panel-inner--text-only">
+        <div class="press-panel-text">
+          <p class="press-panel-label">Stereo Stickman · Oct 2026</p>
+          <h2 class="press-panel-title">Fahriye — RESIST</h2>
+          <p class="press-panel-blurb">"Introducing a bold and captivating fusion of Turkish rhythms, melodies and influences, with a modern Western-pop twist of story and performance. Songwriter and artist Fahriye captures a clear sound of her own, with the hypnotic darkness and seduction of RESIST."</p>
+          <a href="https://stereostickman.com/music/fahriye-resist/" target="_blank" class="press-panel-link">Read Article ↗</a>
+          <p class="press-scroll-hint">scroll for more ↓</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="press-panel" data-bg="hypeindex.png" style="animation: bounceIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.25s both;">
+      <div class="press-panel-inner press-panel-inner--text-only">
+        <div class="press-panel-text">
+          <p class="press-panel-label">Hype Index · Aug 2026</p>
+          <h2 class="press-panel-title">GENESIS as a featured release for Hype Index, August 2026</h2>
+          <p class="press-panel-blurb">GENESIS was a part of the featured releases by Hype Index in the month of August 2026.</p>
+          <a href="https://hype-index.com/projects/genesis" target="_blank" class="press-panel-link">Read Article ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="press-panel" data-bg="genesisepmore.png" style="animation: bounceIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.4s both;">
+      <div class="press-panel-inner press-panel-inner--text-only">
+        <div class="press-panel-text">
+          <p class="press-panel-label">Backstage Pass by Emily Stabell · Jul 21 2026</p>
+          <h2 class="press-panel-title">Fahriye, making music that feels "confident, feminine, and powerful"</h2>
+          <p class="press-panel-blurb">"Fahriye is a 21-year-old artist originally from the Bay Area with Turkish-German roots currently based in Boston! At first, she was scared that people wouldn't be supportive of her music career, but has encountered so many talented and intelligent people. She's even connected with people who are pursuing different dreams but still come together because we have the same drive, ambition, passion, and love for what we do..."</p>
+          <a href="https://emilystabell.substack.com/p/fahriye-making-music-that-feels-confident?r=3qfd70&utm_medium=ios&triedRedirect=true&utm_source=ig&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnYBBEDO6mT8_GU49dWVDjlxvqort6MpaDkYxNzRhCxrHLUBLVQDluBV9ll5Q_aem_ttAu1SEGmcJFXR-f5BPkCg&utm_id=97760_v0_s00_e0_tv3" target="_blank" class="press-panel-link">Read Article ↗</a>
+        </div>
+      </div>
+    </section>
+
   </div>
-
-  <header class="releases-header">
-    <p class="hero-tag">Media</p>
-    <h1>Press</h1>
-    <p class="hero-sub">features, interviews & coverage</p>
-    <p style="font-size:0.75rem; letter-spacing:0.1em; opacity:0.5; margin-top:0.5rem;">CLICK ON THE IMAGES TO READ MORE</p>
-  </header>
-
-  <section class="release-section" id="press-3">
-    <div class="container release-grid">
-
-      <div class="release-info">
-        <p class="release-label">Stereo Stickman · Oct 2026</p>
-        <h2 class="press-title">Fahriye — RESIST</h2>
-        <p class="release-blurb">
-          "Introducing a bold and captivating fusion of Turkish rhythms, melodies and influences, with a modern Western-pop twist of story and performance. Songwriter and artist Fahriye captures a clear sound of her own, with the hypnotic darkness and seduction of RESIST."
-
-        </p>
-      </div>
-
-      <a href="https://stereostickman.com/music/fahriye-resist/" target="_blank" class="press-image-wrap">
-        <img src="resist cover (2).jpg" alt="Stereo Stickman feature" class="press-img" />
-      </a>
-
-    </div>
-  </section>
-
-  <section class="release-section alt" id="press-2">
-    <div class="container release-grid reverse">
-
-      <div class="release-info">
-        <p class="release-label">Hype Index · Aug 2026</p>
-        <h2 class="press-title">GENESIS as a featured release for Hype Index, August 2026</h2>
-        <p class="release-blurb">
-          GENESIS was a part of the featured releases by Hype Index in the month of August 2026.
-
-        </p>
-      </div>
-
-      <a href="https://hype-index.com/projects/genesis" target="_blank" class="press-image-wrap">
-        <img src="hypeindex.png" alt="Hype Index feature" class="press-img" />
-      </a>
-
-    </div>
-  </section>
-
-  <section class="release-section" id="press-1">
-    <div class="container release-grid">
-
-      <div class="release-info">
-        <p class="release-label">Backstage Pass by Emily Stabell · Jul 21 2026</p>
-        <h2 class="press-title">Fahriye, making music that feels "confident, feminine, and powerful"</h2>
-        <p class="release-blurb">
-         “Fahriye is a 21-year-old artist originally from the Bay Area with Turkish-German roots currently based in Boston! At first, she was scared that people wouldn’t be supportive of her music career, but has encountered so many talented and intelligent people. She’s even connected with people who are pursuing different dreams but still come together because we have the same drive, ambition, passion, and love for what we do...”
-
-        </p>
-      </div>
-
-      <a href="https://emilystabell.substack.com/p/fahriye-making-music-that-feels-confident?r=3qfd70&utm_medium=ios&triedRedirect=true&utm_source=ig&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnYBBEDO6mT8_GU49dWVDjlxvqort6MpaDkYxNzRhCxrHLUBLVQDluBV9ll5Q_aem_ttAu1SEGmcJFXR-f5BPkCg&utm_id=97760_v0_s00_e0_tv3" target="_blank" class="press-image-wrap">
-        <img src="genesisepmore.png" alt="Press feature image" class="press-img" />
-      </a>
-
-    </div>
-  </section>
 
   <footer>
     <div class="container footer-inner">
@@ -109,5 +78,40 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const panels = document.querySelectorAll('.press-panel');
+    const bg = document.getElementById('press-bg');
+
+    // Preload all background images
+    panels.forEach(p => {
+      const img = new Image();
+      img.src = p.dataset.bg;
+    });
+
+    // Set first bg immediately
+    if (panels.length) bg.style.backgroundImage = `url('${panels[0].dataset.bg}')`;
+
+    let currentBg = panels[0]?.dataset.bg;
+
+    function updateBg() {
+      let active = panels[0];
+      panels.forEach(panel => {
+        const rect = panel.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.5) active = panel;
+      });
+      const newBg = active.dataset.bg;
+      if (newBg !== currentBg) {
+        bg.classList.remove('bg-visible');
+        setTimeout(() => {
+          bg.style.backgroundImage = `url('${newBg}')`;
+          bg.classList.add('bg-visible');
+          currentBg = newBg;
+        }, 200);
+      }
+    }
+
+    bg.classList.add('bg-visible');
+    window.addEventListener('scroll', updateBg, { passive: true });
+  </script>
 </body>
 </html>

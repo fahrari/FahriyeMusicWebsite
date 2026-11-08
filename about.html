@@ -5,58 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Fahriye</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="cursor.png" />
+  <link rel="icon" type="image/png" href="glowlogo.png" />
+  <link rel="apple-touch-icon" href="genesis ep cover.jpeg" />
 </head>
-<body>
+<body class="about-page">
 
-  <nav id="navbar">
-    <div class="nav-inner">
-      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
-      <a class="nav-logo" href="/"><img src="FahriyeLogo-trimmed.png" class="logo-light" alt="FAHRIYE" /><img src="FahriyeLogoBlack-trimmed.png" class="logo-dark" alt="FAHRIYE" /></a>
-    </div>
+  <nav class="text-nav text-nav-light">
+    <a href="/" class="text-nav-home"><img src="fahriyelogowhitenew.png" alt="Fahriye" class="text-nav-logo" /></a>
+    <a href="about.html">About</a>
+    <a href="music.html">Music</a>
+    <a href="releases.html">Releases</a>
+    <a href="press.html">Press</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <div id="nav-overlay">
-    <button id="nav-close">&times;</button>
-    <ul id="nav-menu">
-      <li><a href="about.html">About</a></li>
-      <li><a href="music.html">Music</a></li>
-      <li><a href="releases.html">Releases</a></li>
-      <li><a href="press.html">Press</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-
   <section id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-image">
-          <img src="divafahri.png" alt="Fahriye" />
-          <p style="margin-top: 0.6rem; font-size: 0.85rem; text-align: center;"><em>"Maddy knew who she was from a very early age."</em></p>
-          <p style="font-size: 0.75rem; text-align: center; opacity: 0.6;">Euphoria HBO - Season 1, Episode 5</p>
-        </div>
-        <div class="about-text">
-          <h2>introducing me &lt;3</h2>
-          <p>
-            I grew up between two musical worlds with both Turkish songs and western pop on my CDs and iPod. Both live in me, and both show up in my music, sometimes on their own, sometimes fused.
-          </p>
-          <p>
-            I'm Fahriye (Fah-ree-yeh), & I'm a multi-threat recording artist currently based in Boston, MA. I grew up in San José, Bay Area, CA, and my roots are Turkish + German. I'm a vocalist, songwriter, producer, performer, and dancer whose influences span Beyoncé to Hadise. I have been songwriting consistently since I was 16 years old, debuted with my song "Move" on my 20th birthday July 4th 2025, and I'm releasing an EP later this year.
-          </p>
-
-          <p>My sound is unique, fresh, and fully me while staying grounded in the western pop music, traditional Turkish music, and pop that infused middle-eastern elements into its sound. Additionally I have also been performing and dancing for as long as I can remember and strive to be an artist who constantly raises the bar for myself. Never only in one place, appreciating what I've accomplished, but looking forward to how I can keep getting even better in what I do. In my case, there is nothing I love more than being a vocalist, songwriter, producer, performer, dancer, and overall someone with a powerful creative vision.</p>
-          <p style="margin-bottom: 0.3rem;"><em><u>Latest release:</u></em></p>
-          <iframe
-            src="https://open.spotify.com/embed/album/4shezrIoJYDNYcFzm0CyCV?utm_source=generator&theme=0"
-            width="100%"
-            height="80"
-            frameborder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-            style="border-radius: 8px; margin-top: 0;">
-          </iframe>
-        </div>
+    <div class="about-tricolumn">
+      <div class="about-col about-col-left">
+        <h2 class="about-title">introducing me &lt;3</h2>
+        <p>I grew up between two musical worlds with both Turkish songs and western pop on my CDs and iPod. Both live in me, and both show up in my music, sometimes on their own, sometimes fused.</p>
+        <p>I'm Fahriye (Fah-ree-yeh), a multi-threat recording artist currently based in Boston, MA. I grew up in San José, Bay Area, CA, and my roots are Turkish + German.</p>
       </div>
+
+      <div class="about-col about-col-center">
+        <img src="divafahri.png" alt="Fahriye" class="about-circle-img" />
+        <p class="about-quote"><em>"Maddy knew who she was from a very early age."</em></p>
+        <p class="about-quote-src">Euphoria HBO · S1E5</p>
+      </div>
+
+      <div class="about-col about-col-right">
+        <p>I'm a vocalist, songwriter, producer, performer, and dancer whose influences span Beyoncé to Hadise. I've been songwriting since I was 16, debuted with "Move" on my 20th birthday, and released my debut EP GENESIS in 2026.</p>
+        <p>My sound is unique, fresh, and fully me — grounded in western pop, traditional Turkish music, and everything in between. There is nothing I love more than being an artist with a powerful creative vision.</p>
+      </div>
+    </div>
+
+    <div class="about-release">
+      <p class="about-release-label"><em>Latest release</em></p>
+      <iframe
+        src="https://open.spotify.com/embed/album/4shezrIoJYDNYcFzm0CyCV?utm_source=generator&theme=0"
+        width="480"
+        height="80"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        style="border-radius: 8px;">
+      </iframe>
     </div>
   </section>
 

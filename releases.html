@@ -5,257 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Releases — Fahriye</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="cursor.png" />
+  <link rel="icon" type="image/png" href="glowlogo.png" />
+  <link rel="apple-touch-icon" href="genesis ep cover.jpeg" />
 </head>
-<body>
+<body class="releases-page">
 
-  <nav id="navbar" class="nav-dark">
-    <div class="nav-inner">
-      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
-      <a class="nav-logo" href="/"><img src="FahriyeLogo-trimmed.png" class="logo-light" alt="FAHRIYE" /><img src="FahriyeLogoBlack-trimmed.png" class="logo-dark" alt="FAHRIYE" /></a>
-    </div>
+  <nav class="text-nav text-nav-light releases-nav">
+    <a href="/" class="text-nav-home"><img src="fahriyelogowhitenew.png" alt="Fahriye" class="text-nav-logo" /></a>
+    <a href="about.html">About</a>
+    <a href="music.html">Music</a>
+    <a href="releases.html">Releases</a>
+    <a href="press.html">Press</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <div id="nav-overlay">
-    <button id="nav-close">&times;</button>
-    <ul id="nav-menu">
-      <li><a href="about.html">About</a></li>
-      <li><a href="music.html">Music</a></li>
-      <li><a href="releases.html">Releases</a></li>
-      <li><a href="press.html">Press</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-  
-  <header class="releases-header">
-    <p class="hero-tag">Discography</p>
-    <h1>Releases</h1>
-  </header>
+  <!-- GENESIS EP section -->
+  <section class="releases-ep-section">
+    <div class="releases-ep-bg"></div>
 
-
-  <div class="project-group">
-    <div class="project-header">
-      <div class="container">
-        <p class="hero-tag">EP</p>
-        <h2 class="project-title">[REDACTED] EP</h2>
-      </div>
+    <div class="releases-ep-meta" style="animation: bounceIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.1s both;">
+      <p class="releases-ep-tag">EP · December 4, 2026</p>
+      <img src="gengoldlogo.png" alt="GENESIS EP" class="releases-ep-logo" />
+      <p class="releases-ep-sub">Producer, Performer, Songwriter: Fahriye · Co-Producer, Mixing & Mastering: Curtis Hicks</p>
+      <p class="releases-ep-hint">click the record to explore the songs</p>
     </div>
 
+      <div class="record-scene" id="record-scene" style="animation: bounceIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.25s both;">
+        <div class="record-wrap" id="record-wrap">
+          <img src="genesisvinylnew.png" alt="GENESIS EP record" class="record-img" id="record-img" />
+        </div>
+
+        <!-- Song chips, hidden until clicked -->
+        <button class="song-chip" data-song="genesis"    style="--angle:0deg">GENESIS</button>
+        <button class="song-chip" data-song="girlsgirl"  style="--angle:72deg">GIRL'S<br>GIRL</button>
+        <button class="song-chip" data-song="outofsight" style="--angle:144deg">OUT OF SIGHT</button>
+        <button class="song-chip" data-song="someonewho" style="--angle:216deg">SOMEONE WHO</button>
+        <button class="song-chip" data-song="resist"     style="--angle:288deg">RESIST</button>
+      </div>
+  </section>
+
+  <!-- Singles section -->
+  <section class="releases-singles-section" style="animation: bounceIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.4s both;">
     <div class="container">
-      <div class="release-accordion">
+      <h2 class="releases-singles-heading">Singles</h2>
+      <div class="singles-carousel">
+        <button class="singles-arrow singles-prev" aria-label="Previous">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+        </button>
 
-        <div class="accordion-item" id="genesis">
-          <button class="accordion-trigger" aria-expanded="false">
-            <span class="accordion-title">GENESIS</span>
-            <span class="accordion-meta">Single · Jun 12 2026</span>
-            <span class="accordion-arrow">&#8964;</span>
-          </button>
-          <div class="accordion-body">
-            <div class="release-grid">
-              <div class="release-info">
-                <p class="release-label">Single · Jun 12 2026</p>
-                <h2>GENESIS</h2>
-                <p class="release-blurb">
-                  GENESIS, is the first track of my upcoming EP [REDACTED] and it's an incredibly
-                  special track to me. I created it shortly after I first made "Move" (my debut single)
-                  in June 2025. I blended a lot of Turkish instruments (bağlama, zurna, darbuka) and
-                  references ("Protected and favored by my nazaar amulet", the bridge is entirely in
-                  Turkish) in this song. It's also my first bilingual song, as I sing in both English
-                  & Turkish. The song is about being young, ambitious, chasing your dreams, and
-                  people telling you it's unrealistic just makes you want it more.
-                </p>
-                <div class="release-links">
-                  <a href="https://ffm.to/genesis-qetb" class="btn btn-primary btn-small">baby listen to my genesis</a>
-                </div>
+        <div class="singles-track">
+          <div class="single-card active">
+            <div class="single-cover" onclick="toggleSingleInfo(this)">
+              <img src="mob1.jpg" alt="Make or Break" />
+            </div>
+            <div class="single-info">
+              <div class="single-info-inner">
+                <button class="single-info-close" onclick="closeSingleInfo(this)">×</button>
+                <p class="single-label">Single · Oct 31 2025</p>
+                <h3 class="single-title">Make or Break</h3>
+                <p class="single-blurb">Make or Break was an incredibly experimental track for me. It's a dark pop track about wanting to enjoy the moment. I wrote it at a time where there was a lot of stress coming at me from what felt like all sides of my life. I was having sleepless nights and I wanted a track that I could dance to and make me feel free. I love the build-up through the song, leading to a very dancey ending. Halloween also fell on a Friday in 2025, so it felt right to release this song that day.</p>
+                <p class="single-credits">Producer, Performer, Songwriter: Fahriye · Co-Producer, Mixing & Mastering: Mancini</p>
+                <a href="https://ffm.to/make-or-break" class="press-panel-link">if you listen, will make or break me ↗</a>
               </div>
-              <div>
-                <div class="slideshow" data-release="genesis">
-                  <div class="slides">
-                    <div class="slide active"><img src="squarecover.PNG" alt="Genesis cover" /></div>
-                    <div class="slide"><img src="genesis2.png" alt="Genesis photoshoot" /></div>
-                    <div class="slide"><img src="genesis5.png" alt="Genesis photoshoot" /></div>
-                  </div>
-                  <button class="slide-btn prev" aria-label="Previous">&#8592;</button>
-                  <button class="slide-btn next" aria-label="Next">&#8594;</button>
-                  <div class="slide-dots"></div>
-                </div>
-                <p class="photo-credit">Photo Credits: @me</p>
+            </div>
+          </div>
+
+          <div class="single-card">
+            <div class="single-cover" onclick="toggleSingleInfo(this)">
+              <img src="move1.PNG" alt="Move" />
+            </div>
+            <div class="single-info">
+              <div class="single-info-inner">
+                <button class="single-info-close" onclick="closeSingleInfo(this)">×</button>
+                <p class="single-label">Single · Jul 4 2025</p>
+                <h3 class="single-title">Move</h3>
+                <p class="single-blurb">Move is my debut single about partying with your partner and even with every temptation that exists in a club setting, you just want to let loose with them. The click clack sounds you hear in the background is the sound of Turkish spoons and the pre-chorus includes a bağlama. It was my very first time incorporating Turkish elements into a song. I also released this song on my 20th birthday, as it had fallen on a Friday in 2025, because what better way to start a decade than debuting your music career.</p>
+                <p class="single-credits">Producer, Performer, Songwriter: Fahriye</p>
+                <a href="https://ffm.to/move-y32r" class="press-panel-link">what's your next move? ↗</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="accordion-item" id="resist">
-          <button class="accordion-trigger" aria-expanded="false">
-            <span class="accordion-title">RESIST</span>
-            <span class="accordion-meta">Single · Oct 23 2026</span>
-            <span class="accordion-arrow">&#8964;</span>
-          </button>
-          <div class="accordion-body">
-            <div class="release-grid">
-              <div class="release-info">
-                <p class="release-label">Single · Oct 23 2026</p>
-                <h2>RESIST</h2>
-                <p class="release-blurb">
-                  I guess you could call RESIST my first ever "love" (was never in love) or crush song that I have, that was inspired by my real life events. It was inspired by a very intense crush I had in Autumn 2025 and the song more follows my feelings towards him rather than him himself. I had never felt anything that intense in my life (would not recommend) and needed to get it out in some way. This song was the best thing to come out of that infatuation. It has a lot of Turkish musical elements in this, as well as stacked harmonies, and a dramatic intro that gets my blood pumping every time.
-                </p>
-                <div class="release-links">
-                  <a href="https://ffm.to/resist-2thf" target="_blank" class="btn btn-primary btn-small">listen to RESIST</a>
-                </div>
-              </div>
-              <div>
-                <div class="slideshow" data-release="resist">
-                  <div class="slides">
-                    <div class="slide active"><img src="resist cover (2).jpg" alt="Resist cover" /></div>
-                  </div>
-                  <button class="slide-btn prev" aria-label="Previous">&#8592;</button>
-                  <button class="slide-btn next" aria-label="Next">&#8594;</button>
-                  <div class="slide-dots"></div>
-                </div>
-                <p class="photo-credit">Photo Credits: <a href="https://www.instagram.com/macstired/" target="_blank">@macstired</a> on Instagram</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-trigger" aria-expanded="false">
-            <span class="accordion-title">[REDACTED]</span>
-            <span class="accordion-meta">Coming Soon</span>
-            <span class="accordion-arrow">&#8964;</span>
-          </button>
-          <div class="accordion-body">
-            <div class="release-info">
-              <p class="release-label">Coming Soon</p>
-              <h2>[REDACTED]</h2>
-              <p class="release-blurb">Details coming soon.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-trigger" aria-expanded="false">
-            <span class="accordion-title">[REDACTED]</span>
-            <span class="accordion-meta">Coming Soon</span>
-            <span class="accordion-arrow">&#8964;</span>
-          </button>
-          <div class="accordion-body">
-            <div class="release-info">
-              <p class="release-label">Coming Soon</p>
-              <h2>[REDACTED]</h2>
-              <p class="release-blurb">Details coming soon.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-trigger" aria-expanded="false">
-            <span class="accordion-title">[REDACTED]</span>
-            <span class="accordion-meta">Coming Soon</span>
-            <span class="accordion-arrow">&#8964;</span>
-          </button>
-          <div class="accordion-body">
-            <div class="release-info">
-              <p class="release-label">Coming Soon</p>
-              <h2>[REDACTED]</h2>
-              <p class="release-blurb">Details coming soon.</p>
-            </div>
-          </div>
-        </div>
-
+        <button class="singles-arrow singles-next" aria-label="Next">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zm8.5-6v6h2V6h-2v6z"/></svg>
+        </button>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="project-group">
-    <div class="project-header">
-      <div class="container">
-        <h2 class="project-title">Singles</h2>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="release-accordion">
-
-        <div class="accordion-item" id="make-or-break">
-          <button class="accordion-trigger" aria-expanded="false">
-            <span class="accordion-title">Make or Break</span>
-            <span class="accordion-meta">Single · Oct 31 2025</span>
-            <span class="accordion-arrow">&#8964;</span>
-          </button>
-          <div class="accordion-body">
-            <div class="release-grid">
-              <div class="release-info">
-                <p class="release-label">Single · Oct 31 2025</p>
-                <h2>Make or Break</h2>
-                <p class="release-blurb">
-                  Make or Break was an incredibly experimental track for me. It's a dark pop track
-                  about wanting to enjoy the moment. I wrote it at a time where there was a lot of
-                  stress coming at me from what felt like all sides of my life. I was having sleepless
-                  nights and I wanted a track that I could dance to and make me feel free. I love the
-                  build-up through the song, leading to a very dancey ending. Halloween also fell on a
-                  Friday in 2025, so it felt right to release this song that day.
-                </p>
-                <div class="release-links">
-                  <a href="https://ffm.to/make-or-break" class="btn btn-primary btn-small">if you listen, will make or break me</a>
-                </div>
-              </div>
-              <div class="slideshow" data-release="make-or-break">
-                <div class="slides">
-                  <div class="slide active"><img src="mob1.jpg" alt="Make or Break cover" /></div>
-                  <div class="slide"><img src="mob2.png" alt="Make or Break photoshoot" /></div>
-                  <div class="slide"><img src="mob3.png" alt="Make or Break photoshoot" /></div>
-                </div>
-                <button class="slide-btn prev" aria-label="Previous">&#8592;</button>
-                <button class="slide-btn next" aria-label="Next">&#8594;</button>
-                <div class="slide-dots"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item" id="move">
-          <button class="accordion-trigger" aria-expanded="false">
-            <span class="accordion-title">Move</span>
-            <span class="accordion-meta">Single · Jul 4 2025</span>
-            <span class="accordion-arrow">&#8964;</span>
-          </button>
-          <div class="accordion-body">
-            <div class="release-grid">
-              <div class="release-info">
-                <p class="release-label">Single · Jul 4 2025</p>
-                <h2>Move</h2>
-                <p class="release-blurb">
-                  Move is my debut single about partying with your partner and even with
-                  every temptation that exists in a club setting, you just want to let loose
-                  with them. The click clack sounds you hear in the background is the sound
-                  of Turkish spoons and the pre-chorus includes a bağlama. It was my very first
-                  time incorporating Turkish elements into a song and I knew this was the direction
-                  I wanted my sound to go in. While I want to keep exploring more sounds, it's always
-                  felt right to incorporate my heritage into my music.
-
-                  I also released this song on my 20th birthday, as it had fallen on a Friday in 2025,
-                  because what better way to start a decade than debuting your music career.
-                </p>
-                <div class="release-links">
-                  <a href="https://ffm.to/move-y32r" class="btn btn-primary btn-small">what's your next move?</a>
-                </div>
-              </div>
-              <div class="slideshow" data-release="move">
-                <div class="slides">
-                  <div class="slide active"><img src="move1.PNG" alt="Move cover" /></div>
-                  <div class="slide"><img src="move2.png" alt="Move photoshoot" /></div>
-                  <div class="slide"><img src="move3.png" alt="Move photoshoot" /></div>
-                </div>
-                <button class="slide-btn prev" aria-label="Previous">&#8592;</button>
-                <button class="slide-btn next" aria-label="Next">&#8594;</button>
-                <div class="slide-dots"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+  <!-- Song story modal -->
+  <div id="song-modal" class="song-modal hidden">
+    <div class="song-modal-inner">
+      <button class="song-modal-close" id="song-modal-close">×</button>
+      <p class="song-modal-label" id="song-modal-label"></p>
+      <h2 class="song-modal-title" id="song-modal-title"></h2>
+      <p class="song-modal-blurb" id="song-modal-blurb"></p>
+      <a class="song-modal-link press-panel-link" id="song-modal-link" href="#" target="_blank"></a>
     </div>
   </div>
 
@@ -277,6 +123,130 @@
   </footer>
 
   <script src="script.js"></script>
-  <script src="releases.js"></script>
+  <script>
+    // Singles carousel
+    const singleCards = document.querySelectorAll('.single-card');
+    const singleDots = document.querySelectorAll('.singles-dot');
+    let currentSingle = 0;
+
+    function goToSingle(n) {
+      singleCards[currentSingle].classList.remove('active', 'info-open');
+      currentSingle = (n + singleCards.length) % singleCards.length;
+      singleCards[currentSingle].classList.add('active');
+    }
+
+    document.querySelector('.singles-prev').addEventListener('click', () => goToSingle(currentSingle - 1));
+    document.querySelector('.singles-next').addEventListener('click', () => goToSingle(currentSingle + 1));
+
+    // Swipe support for singles
+    let singlesSwipeX = 0;
+    const singlesTrack = document.querySelector('.singles-track');
+    singlesTrack.addEventListener('touchstart', e => { singlesSwipeX = e.touches[0].clientX; }, { passive: true });
+    singlesTrack.addEventListener('touchend', e => {
+      const diff = singlesSwipeX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goToSingle(currentSingle + (diff > 0 ? 1 : -1));
+    }, { passive: true });
+
+    function toggleSingleInfo(coverEl) {
+      coverEl.closest('.single-card').classList.toggle('info-open');
+    }
+    function closeSingleInfo(closeBtn) {
+      closeBtn.closest('.single-card').classList.remove('info-open');
+    }
+
+  </script>
+  <script>
+    const songs = {
+      genesis: {
+        label: 'Single · Jun 12 2026',
+        title: 'GENESIS',
+        blurb: 'I believe we were put on this earth to change. To grow. To evolve. If I am ever in a place in my life where I\'m not learning and growing, I need the people around me to snap me out of it. I believe in being seen before being perfect. I believe you are allowed to make mistakes in pursuit of your dreams. That\'s what Genesis is about. I know who I am, the good, the bad, the ugly, and the incredible. With the Turkish instruments, my vulnerability, my confidence, the strong bass, the fact that this is my first bilingual song, I can\'t think of a song more like me than Genesis. Sit back, relax, and enjoy watching my Genesis.',
+        link: 'https://ffm.to/genesis-qetb',
+        linkText: 'baby listen to my genesis ↗'
+      },
+      girlsgirl: {
+        label: 'Dec 4 2026',
+        title: "GIRL'S GIRL",
+        blurb: 'Details coming soon.',
+        link: null
+      },
+      outofsight: {
+        label: 'Dec 4 2026',
+        title: 'OUT OF SIGHT',
+        blurb: 'Details coming soon.',
+        link: null
+      },
+      someonewho: {
+        label: 'Dec 4 2026',
+        title: 'SOMEONE WHO',
+        blurb: 'Details coming soon.',
+        link: null
+      },
+      resist: {
+        label: 'Single · Oct 23 2026',
+        title: 'RESIST',
+        blurb: 'My attachment style for the longest time was something I like to call "avoidant yearner". I felt things so intensely that it scared me and I didn\'t do anything about it. This song tells the story of an incredibly intense crush I had that I never want to feel again and I wanted to make the song more about my feelings rather than him. I learned a lot about how I processed romantic feelings through this crush. I think I liked him, because I couldn\'t talk to him and could make up a version of him in my head. As they say, a crush is a lack of information. The song is kind of satirical, because I sing lines like "Will you please reject me, so that I can move on, not gonna talk to you, but waiting on your response". It also closes the EP, because I felt like the project needed to go out with a bang.',
+        link: 'https://ffm.to/resist-2thf',
+        linkText: "what's it about this song i can't resist ↗"
+      }
+    };
+
+    const scene = document.getElementById('record-scene');
+    const recordWrap = document.getElementById('record-wrap');
+    const chips = document.querySelectorAll('.song-chip');
+    const modal = document.getElementById('song-modal');
+    const modalClose = document.getElementById('song-modal-close');
+    let expanded = false;
+    const isMobile = window.innerWidth <= 768;
+    const radius = isMobile ? Math.min(110, window.innerWidth * 0.30) : Math.min(240, window.innerWidth * 0.24);
+
+    // Position chips in a circle
+    chips.forEach((chip, i) => {
+      const angle = (i / chips.length) * Math.PI * 2 - Math.PI / 2;
+      let tx = Math.cos(angle) * radius;
+      let ty = Math.sin(angle) * radius + (chip.dataset.song === 'genesis' ? 30 : 0);
+      if (isMobile) {
+        if (chip.dataset.song === 'genesis') ty -= 15;
+        if (chip.dataset.song === 'girlsgirl') tx += 4;
+      }
+      chip.dataset.tx = tx;
+      chip.dataset.ty = ty;
+      chip.style.transform = 'translate(-50%, -50%)';
+    });
+
+    recordWrap.addEventListener('click', () => {
+      expanded = !expanded;
+      scene.classList.toggle('expanded', expanded);
+      chips.forEach(chip => {
+        if (expanded) {
+          chip.style.transform = `translate(calc(-50% + ${chip.dataset.tx}px), calc(-50% + ${chip.dataset.ty}px))`;
+        } else {
+          chip.style.transform = 'translate(-50%, -50%)';
+        }
+      });
+    });
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', e => {
+        e.stopPropagation();
+        const data = songs[chip.dataset.song];
+        document.getElementById('song-modal-label').textContent = data.label;
+        document.getElementById('song-modal-title').textContent = data.title;
+        document.getElementById('song-modal-blurb').textContent = data.blurb;
+        const link = document.getElementById('song-modal-link');
+        if (data.link) {
+          link.href = data.link;
+          link.textContent = data.linkText;
+          link.style.display = 'inline-block';
+        } else {
+          link.style.display = 'none';
+        }
+        modal.classList.remove('hidden');
+      });
+    });
+
+    modalClose.addEventListener('click', () => modal.classList.add('hidden'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.add('hidden'); });
+  </script>
 </body>
 </html>

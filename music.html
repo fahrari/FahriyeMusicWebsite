@@ -5,89 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Music — Fahriye</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="cursor.png" />
+  <link rel="icon" type="image/png" href="glowlogo.png" />
+  <link rel="apple-touch-icon" href="genesis ep cover.jpeg" />
 </head>
-<body>
-
-  <nav id="navbar">
-    <div class="nav-inner">
-      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
-      <a class="nav-logo" href="/"><img src="FahriyeLogo-trimmed.png" class="logo-light" alt="FAHRIYE" /><img src="FahriyeLogoBlack-trimmed.png" class="logo-dark" alt="FAHRIYE" /></a>
-    </div>
-  </nav>
-
-  <div id="nav-overlay">
-    <button id="nav-close">&times;</button>
-    <ul id="nav-menu">
-      <li><a href="about.html">About</a></li>
-      <li><a href="music.html">Music</a></li>
-      <li><a href="releases.html">Releases</a></li>
-      <li><a href="press.html">Press</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
+<body class="orb-page-dark">
 
   <section id="music">
     <div class="music-video-bg">
       <iframe src="https://www.youtube.com/embed/DSqxxzTiKCE?autoplay=1&mute=1&loop=1&playlist=DSqxxzTiKCE&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       <div class="music-video-overlay"></div>
     </div>
+    <nav class="text-nav text-nav-light">
+      <a href="/" class="text-nav-home"><img src="fahriyelogowhitenew.png" alt="Fahriye" class="text-nav-logo" /></a>
+      <a href="about.html">About</a>
+      <a href="music.html">Music</a>
+      <a href="releases.html">Releases</a>
+      <a href="press.html">Press</a>
+      <a href="contact.html">Contact</a>
+    </nav>
     <div class="container">
-      <h2 class="section-title">what's new?</h2>
-      <div class="music-grid">
+      <h2 class="section-title" style="animation: bounceIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.1s both;">what's new?</h2>
 
-        <div class="music-card">
-          <div class="album-art placeholder-art">
-            <img src="resist cover (2).jpg" alt="Resist" />
-          </div>
-          <div class="music-info">
-            <h3>RESIST</h3>
-            <p class="music-meta">Single · Out Now</p>
-            <p>My new single "RESIST" — out now on all platforms!</p>
-            <div class="music-links">
-              <a href="https://ffm.to/resist-2thf" target="_blank" class="btn btn-small btn-outline">Listen Now</a>
-            </div>
-          </div>
+      <div class="orbit-system" style="animation: bounceIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.2s both;">
+        <div class="orbit-ring"></div>
+
+        <div class="planet active" data-index="0">
+          <img src="genesis ep cover.jpeg" alt="GENESIS EP" />
+        </div>
+        <div class="planet" data-index="1">
+          <img src="resist cover (2).jpg" alt="RESIST" />
+        </div>
+        <div class="planet" data-index="2">
+          <img src="squarecover.PNG" alt="GENESIS" />
         </div>
 
-        <div class="music-card">
-          <div class="album-art placeholder-art">
-            <img src="squarecover.PNG" alt="Genesis" />
-          </div>
-          <div class="music-info">
-            <h3>Latest Release</h3>
-            <p class="music-meta">Single · 2026</p>
-            <p>My newest release "GENESIS", out on all platforms.</p>
-            <div class="music-links">
-              <a href="https://ffm.to/genesis-qetb" class="btn btn-small btn-outline">Buy / Download</a>
-            </div>
-          </div>
+        <div class="orbit-info">
+          <p class="orbit-meta" id="orbit-meta"></p>
+          <h3 class="orbit-title" id="orbit-title"></h3>
+          <p class="orbit-desc" id="orbit-desc"></p>
+          <a class="orbit-link press-panel-link" id="orbit-link" href="#" target="_blank"></a>
         </div>
 
-        <div class="music-card">
-          <div class="music-video-wrap">
-            <iframe
-              src="https://www.youtube.com/embed/DSqxxzTiKCE"
-              title="Make or Break - Official Music Video"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              loading="lazy">
-            </iframe>
-          </div>
-          <div class="music-info">
-            <h3>Make or Break</h3>
-            <p class="music-meta">Official Music Video · 2025</p>
-            <p>Watch the official music video for "Make or Break".</p>
-            <div class="music-links">
-              <a href="https://www.youtube.com/watch?v=DSqxxzTiKCE" target="_blank" class="btn btn-small btn-outline">Watch on YouTube</a>
-            </div>
-          </div>
+        <div class="orbit-nav">
+          <button class="orbit-prev">←</button>
+          <button class="orbit-next">→</button>
         </div>
-
-
       </div>
-      <div class="covers-dropdown">
+      <div class="covers-dropdown" style="animation: bounceIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.5s both;">
         <button class="covers-toggle" aria-expanded="false">covers <span class="covers-arrow">↓</span></button>
         <div class="covers-body">
         <div class="covers-row">
@@ -151,6 +115,10 @@
                 <video src="faouziacover.mp4" controls playsinline></video>
                 <p class="slide-label">Faouzia</p>
               </div>
+              <div class="slide">
+                <video src="Bring Me To Life .mp4" controls playsinline></video>
+                <p class="slide-label">Bring Me To Life — Evanescence</p>
+              </div>
             </div>
             <div class="slide-dots" id="vocal-dots"></div>
           </div>
@@ -163,6 +131,62 @@
       </div><!-- end covers-dropdown -->
     </div>
   </section><!-- end #music -->
+
+  <script>
+    const releases = [
+      { meta: 'EP · December 4, 2026', title: 'GENESIS EP', desc: 'My debut EP — out December 4th.', link: 'https://ffm.to/psgenesisep', linkText: 'Pre-Save ↗' },
+      { meta: 'Single · Out Now', title: 'RESIST', desc: 'My latest single — out on all platforms now.', link: 'https://ffm.to/resist-2thf', linkText: 'Listen Now ↗' },
+      { meta: 'Single · 2026', title: 'GENESIS', desc: '"GENESIS" — out on all platforms.', link: 'https://ffm.to/genesis-qetb', linkText: 'Listen ↗' },
+    ];
+
+    const planets = document.querySelectorAll('.planet');
+    let current = 0;
+
+    function positionPlanets() {
+      const total = planets.length;
+      planets.forEach((p, i) => {
+        const offset = ((i - current + total) % total);
+        const angles = [0, 1, -1];
+        const angle = angles[offset] * 55;
+        const rad = angle * Math.PI / 180;
+        const r = 180;
+        const x = Math.sin(rad) * r;
+        const z = Math.cos(rad) * r;
+        const scale = 0.4 + (z / r) * 0.6;
+        const opacity = offset === 0 ? 1 : 0.5;
+        p.style.transform = `translateX(${x}px) scale(${scale})`;
+        p.style.opacity = opacity;
+        p.style.zIndex = Math.round(z + 200);
+        p.classList.toggle('active', offset === 0);
+      });
+      const d = releases[current];
+      document.getElementById('orbit-meta').textContent = d.meta;
+      document.getElementById('orbit-title').textContent = d.title;
+      document.getElementById('orbit-desc').textContent = d.desc;
+      const link = document.getElementById('orbit-link');
+      link.href = d.link;
+      link.textContent = d.linkText;
+    }
+
+    function advance(dir) {
+      current = (current + dir + releases.length) % releases.length;
+      positionPlanets();
+    }
+
+    planets.forEach((p, i) => p.addEventListener('click', () => { current = i; positionPlanets(); }));
+    document.querySelector('.orbit-prev').addEventListener('click', () => advance(-1));
+    document.querySelector('.orbit-next').addEventListener('click', () => advance(1));
+    positionPlanets();
+
+    // Swipe support
+    let touchStartX = 0;
+    const orbitEl = document.querySelector('.orbit-system');
+    orbitEl.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    orbitEl.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) advance(diff > 0 ? 1 : -1);
+    }, { passive: true });
+  </script>
 
   <script>
     const coversToggle = document.querySelector('.covers-toggle');
