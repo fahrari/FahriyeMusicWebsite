@@ -1,6 +1,6 @@
 # FahriyeMusicWebsite
 
-Hi! This is website will be used so people can stream.buy my music, connect with me on my socials, and in the future buy concert tickets & buy merch. This website has five different sections:
+Hi! This is website will be used so people can stream/buy my music, connect with me on my socials, and in the future buy concert tickets & buy merch. This website has five different sections:
 1. Homepage --> Has a megalink to my Feature FM page, as well as a button to my inquiries part of the website
 2. About --> Artist profile, a little blurb about myself
 3. Music --> Talks about latest releases, upcoming releases, and links to a part of the website where I talk about my releases (as a filler for now)
@@ -13,4 +13,8 @@ fahriyeinquiries@gmail.com
 
 *Known Issues*
 
+Status: FIXED 
 Original inquiries E-Mail isn't working, use E-Mail above to contact directly.
+
+Status: IN PROGRESS
+On mobile, the song titles of the GENESIS EP in therelease section when you press on the record overlap with the record.
